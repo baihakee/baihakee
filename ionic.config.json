@@ -1,0 +1,7 @@
+{
+  "name": "banana-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
