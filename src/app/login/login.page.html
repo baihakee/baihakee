@@ -1,0 +1,51 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <form>
+    <ion-item lines="full" >
+      <ion-label position="floating" >Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required></ion-input>
+    </ion-item>
+  </form>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/']" expand="block" color="danger">Sign In</ion-button>
+
+      <ion-button color="success" >
+        <ion-icon slot="start"  name="logo-google"></ion-icon>
+        Google
+      </ion-button>
+      <small>
+        <span class="or" >or</span>
+      </small>
+      <ion-button class="f">
+        <ion-icon slot="start" name=logo-facebook></ion-icon>
+        Facebook
+      </ion-button>
+
+
+        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
+        <ion-row>
+        <small>
+          <ion-col class="forgot">
+            <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+          </ion-col>
+        </small>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+<router-outlet></router-outlet>
+  </ion-grid>
+</ion-content>
+
