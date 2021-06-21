@@ -1,11 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header  [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="home">
+      HOME
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content >
+  <ion-card>
+    <ion-card-header  class="welcom">
+      <ion-card-subtitle>welcom to</ion-card-subtitle>
+      <ion-card-title>Banana-app</ion-card-title>
+    </ion-card-header>
 
+    <ion-card-content class="b">
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-button class="go" [routerLink]="['/login']"  color="warning">Go to site</ion-button>
 </ion-content>
