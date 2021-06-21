@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>login</ion-title>
+    <ion-title class="login">login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,14 +24,14 @@
       <ion-col align-self-center>
         <ion-button [routerLink]="['/']" expand="block" color="danger">Sign In</ion-button>
 
-      <ion-button color="success" >
+      <ion-button expand="block" color="success" >
         <ion-icon slot="start"  name="logo-google"></ion-icon>
         Google
       </ion-button>
       <small>
-        <span class="or" >or</span>
+        <div class="or" >-or-</div>
       </small>
-      <ion-button class="f">
+      <ion-button expand="block" class="f">
         <ion-icon slot="start" name=logo-facebook></ion-icon>
         Facebook
       </ion-button>
