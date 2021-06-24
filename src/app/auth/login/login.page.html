@@ -1,9 +1,6 @@
 <ion-header >
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title class="login">login</ion-title>
+  <ion-toolbar  class="bar" >
+    <ion-title  class="login">login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -22,26 +19,26 @@
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
-        <ion-button [routerLink]="['/']" expand="block" color="danger">Sign In</ion-button>
+        <ion-button [routerLink]="['/home']" expand="block" color="danger">Sign In</ion-button>
 
-      <ion-button expand="block" color="success" >
+
+          <div class="or" >-or-</div>
+
+      <ion-button expand="block"  color="success" >
         <ion-icon slot="start"  name="logo-google"></ion-icon>
         Google
       </ion-button>
-      <small>
-        <div class="or" >-or-</div>
-      </small>
       <ion-button expand="block" class="f">
-        <ion-icon slot="start" name=logo-facebook></ion-icon>
+        <ion-icon  slot="end" name=logo-facebook></ion-icon>
         Facebook
       </ion-button>
 
 
-        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
+        <ion-button [routerLink]="['/registration']" expand="block" color="warning">New?CreatAccount</ion-button>
         <ion-row>
         <small>
-          <ion-col class="forgot">
-            <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+          <ion-col  class="forgot">
+            <a float-end [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
           </ion-col>
         </small>
         </ion-row>
