@@ -27,6 +27,20 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'orders',
+    loadChildren: () => import('./orders/orders.module').then( m => m.OrdersPageModule)
+  },  {
+    path: 'orderbbn',
+    loadChildren: () => import('./orderbbn/orderbbn.module').then( m => m.OrderbbnPageModule)
+  },
+
+
+
+
+
+
+
 ];
 
 @NgModule({
