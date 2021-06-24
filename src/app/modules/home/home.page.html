@@ -12,22 +12,40 @@
     <ion-card-subtitle>welcom to</ion-card-subtitle>
     <ion-card-title>Banana-app</ion-card-title>
   </ion-card-header>
+</ion-content>
 
-<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+<ion-menu side="start" menuId="custom" contentId="main" >
   <ion-header  >
-    <ion-toolbar  color="tertiary">
+    <ion-toolbar  color="dark">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list >
-      <ion-item  [routerLink]="['/home']">home</ion-item>
-      <ion-item >profile</ion-item>
-      <ion-item >cart</ion-item>
-      <ion-item >chat</ion-item>
-      <ion-item >setting</ion-item>
-      <ion-item >about</ion-item>
-      <ion-item [routerLink]="['/login']">logout</ion-item>
+      <ion-item  [routerLink]="['/home']">
+        <ion-icon slot="start"  name="home-outline"></ion-icon>
+        Home
+      </ion-item>
+      <ion-item >
+        <ion-icon slot="start"  name="cart-outline"></ion-icon>
+        Cart
+      </ion-item>
+      <ion-item >
+        <ion-icon slot="start"  name="list-outline"></ion-icon>
+        Oder History
+      </ion-item>
+      <ion-item >
+        <ion-icon slot="start"  name="settings-outline"></ion-icon>
+        Setting
+      </ion-item>
+      <ion-item >
+        <ion-icon slot="start"  name="reader-outline"></ion-icon>
+        About
+      </ion-item>
+      <ion-item [routerLink]="['/login']">
+        <ion-icon slot="start"  name="log-out-outline"></ion-icon>
+        Logout
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
