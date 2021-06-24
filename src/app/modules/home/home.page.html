@@ -1,36 +1,82 @@
 <ion-header class="d" [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title class="home"> HOME </ion-title>
+    <ion-title class="home"> BANANASHOP </ion-title>
+    <ion-input type="text"  placeholder="I'm shopping for..." class="search-bar" slot="end"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cart" slot="icon-only" class="white top-btn"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="con">
   <ion-card-header class="welcom">
-    <ion-card-subtitle>welcom to</ion-card-subtitle>
-    <ion-card-title>Banana-app</ion-card-title>
-  </ion-card-header>
+    <ion-card-subtitle>welcom to BANASHOP</ion-card-subtitle>
 
-<ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
-  <ion-header  >
-    <ion-toolbar  color="tertiary">
-      <ion-title>Menu</ion-title>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-button>
+          BANANATOP
+        </ion-button>
+        <ion-button>
+          BANANASELLER
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-button>
+          BANANAOMG
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list >
-      <ion-item  [routerLink]="['/home']">home</ion-item>
-      <ion-item >profile</ion-item>
-      <ion-item >cart</ion-item>
-      <ion-item >chat</ion-item>
-      <ion-item >setting</ion-item>
-      <ion-item >about</ion-item>
-      <ion-item [routerLink]="['/login']">logout</ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
+
+  </ion-card-header>
+  <ion-row>
+    <ion-col class="img1">
+      <ion-img style="width:10vw; height:10vh;" src="https://aa.lnwfile.com/_/aa/_resize/600/600/gx/ir/5h.jpg"></ion-img>
+    </ion-col>
+    <ion-col class="img1">
+      <ion-img style="width:10vw; height:10vh;" src="https://aa.lnwfile.com/_/aa/_resize/600/600/gx/ir/5h.jpg"></ion-img>
+    </ion-col>
+    <ion-col class="img1">
+      <ion-img style="width:10vw; height:10vh;" src="https://aa.lnwfile.com/_/aa/_resize/600/600/gx/ir/5h.jpg">
+      </ion-img>
+    </ion-col>
+
+  </ion-row>
+  <ion-row>
+    <!-- <ion-img class="img1"  src="https://aa.lnwfile.com/_/aa/_resize/600/600/gx/ir/5h.jpg"></ion-img> -->
+  </ion-row>
 
 
-<ion-router-outlet id="main"></ion-router-outlet>
+
+
+
+
+
+
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color="tertiary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['/home']">home</ion-item>
+        <ion-item>profile</ion-item>
+        <ion-item>cart</ion-item>
+        <ion-item>chat</ion-item>
+        <ion-item>setting</ion-item>
+        <ion-item>about</ion-item>
+        <ion-item [routerLink]="['/login']">logout</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-toolbar>
+
+
+    <ion-router-outlet id="main"></ion-router-outlet>
