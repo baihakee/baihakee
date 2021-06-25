@@ -1,50 +1,57 @@
 <ion-header class="d" [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title class="home"> HOME </ion-title>
+    <ion-title class="home"> BANANASHOP </ion-title>
+    <ion-input type="text" placeholder="I'm shopping for..." class="search-bar" slot="end"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cart" slot="icon-only" class="white top-btn"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment mode="md" scrollable="true">
+      <ion-segment-button *ngFor="let item of data;">
+        <ion-text>{{item.title}}</ion-text>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="con">
-  <ion-card-header class="welcom">
-    <ion-card-subtitle>welcom to</ion-card-subtitle>
-    <ion-card-title>Banana-app</ion-card-title>
-  </ion-card-header>
-</ion-content>
 
-<ion-menu side="start" menuId="custom" contentId="main" >
-  <ion-header  >
-    <ion-toolbar  color="dark">
+<ion-menu contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list >
-      <ion-item  [routerLink]="['/home']">
-        <ion-icon slot="start"  name="home-outline"></ion-icon>
+    <ion-list>
+      <ion-item [routerLink]="['/home']">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
         Home
       </ion-item>
-      <ion-item >
-        <ion-icon slot="start"  name="cart-outline"></ion-icon>
+      <ion-item>
+        <ion-icon slot="start" name="cart-outline"></ion-icon>
         Cart
       </ion-item>
-      <ion-item >
-        <ion-icon slot="start"  name="list-outline"></ion-icon>
+      <ion-item>
+        <ion-icon slot="start" name="list-outline"></ion-icon>
         Oder History
       </ion-item>
-      <ion-item >
-        <ion-icon slot="start"  name="settings-outline"></ion-icon>
+      <ion-item>
+        <ion-icon slot="start" name="settings-outline"></ion-icon>
         Setting
       </ion-item>
-      <ion-item >
-        <ion-icon slot="start"  name="reader-outline"></ion-icon>
+      <ion-item>
+        <ion-icon slot="start" name="reader-outline"></ion-icon>
         About
       </ion-item>
-
-      <ion-item [routerLink]="['/login']" >
-        <ion-icon slot="start"  name="log-out-outline"></ion-icon>
+      <ion-item [routerLink]="['/login']">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
         Logout
       </ion-item>
 
@@ -55,3 +62,41 @@
 
 
 <ion-router-outlet id="main"></ion-router-outlet>
+
+<ion-content class="imgbnn">
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-slide>
+        <ion-img src="https://media1.tenor.com/images/562a1d5621e67e0d6502f26a5201249c/tenor.gif?itemid=7396869">
+        </ion-img>
+      </ion-slide>
+      <ion-img
+        src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=809&q=80">
+      </ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img
+        src="https://images.unsplash.com/photo-1579523360595-bee0f3b9fafb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
+      </ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img
+        src="https://images.unsplash.com/photo-1604238401172-a5c5f8d044ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80">
+      </ion-img>
+    </ion-slide>
+  </ion-slides>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-img  class="img1" src="https://images.unsplash.com/photo-1587334206596-c0f9f7dccbe6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=801&q=80"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="img2" src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"></ion-img>
+      </ion-col>
+    </ion-row>
+
+
+
+</ion-content>
