@@ -1,60 +1,76 @@
-
-<ion-header padding  >
-  <ion-toolbar color="warning"  class="bar" >
-<ion-row >
-  <ion-col>
-    <ion-title  class="login">LOGIN</ion-title>
-  </ion-col>
-</ion-row>
-  <ion-col>
-    <ion-img  class="img"  src="https://static.wixstatic.com/media/2cd43b_7461dee11d924b689ca8596010564523~mv2.png/v1/fill/w_320,h_276,q_90/2cd43b_7461dee11d924b689ca8596010564523~mv2.png"></ion-img>
-  </ion-col>
+<ion-header padding>
+  <ion-toolbar color="warning" class="bar">
+    <ion-row>
+      <ion-col>
+        <ion-title class="login">LOGIN</ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-col>
+      <ion-img
+        class="img"
+        src="https://static.wixstatic.com/media/2cd43b_7461dee11d924b689ca8596010564523~mv2.png/v1/fill/w_320,h_276,q_90/2cd43b_7461dee11d924b689ca8596010564523~mv2.png"
+      ></ion-img>
+    </ion-col>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="auth-form">
-  <form >
+  <form>
     <ion-item lines="full" class="text">
-      <ion-label position="floating"  >Email</ion-label>
-      <ion-input clearInput  type="text" required ></ion-input>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input clearInput type="text" required></ion-input>
     </ion-item>
 
     <ion-item lines="full" class="text1">
       <ion-label position="floating">Password</ion-label>
-      <ion-input clearInput type="password" required ></ion-input>
+      <ion-input clearInput type="password" required></ion-input>
     </ion-item>
   </form>
+
+
+    <small>
+      <ion-col >
+        <a [routerLink]="['/forgot-password']"
+          class="small-text"
+          >Forgot Password?</a>
+      </ion-col>
+    </small>
+
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
-        <ion-button fill="outline" [routerLink]="['/home']" expand="block" color="danger">Sign In</ion-button>
+        <ion-button
+          fill="outline"
+          [routerLink]="['/home']"
+          expand="block"
+          color="danger"
+          >Sign In</ion-button>
 
+        <div class="line">or</div>
 
-      <div class="line">or</div>
+        <ion-button
+          class=""
+          fill="outline"
+          expand="block"
+          color="success"
+          no-padding>
+          <ion-icon slot="start" name="logo-google"></ion-icon>
+          Google
+        </ion-button>
 
-      <ion-button class="" fill="outline" expand="block"  color="success" no-padding>
-        <ion-icon slot="start"  name="logo-google"></ion-icon>
-        Google
-      </ion-button>
+        <ion-button float-end fill="outline" expand="block" no-padding>
+          <ion-icon slot="start" name="logo-facebook"></ion-icon>
+          Facebook
+        </ion-button>
 
-      <ion-button float-end  fill="outline" expand="block"  no-padding>
-        <ion-icon  slot="start" name=logo-facebook></ion-icon>
-        Facebook
-      </ion-button>
-
-
-        <ion-button fill="outline" [routerLink]="['/registration']" expand="block" color="warning">New?CreatAccount</ion-button>
-        <ion-row>
-        <small>
-          <ion-col  class="forgot">
-            <a float-end [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
-          </ion-col>
-        </small>
-        </ion-row>
+        <ion-button
+          fill="outline"
+          [routerLink]="['/registration']"
+          expand="block"
+          color="warning"
+          >New?CreatAccount</ion-button>
 
       </ion-col>
     </ion-row>
-<router-outlet></router-outlet>
   </ion-grid>
 </ion-content>
-
