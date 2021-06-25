@@ -1,171 +1,35 @@
-
 <ion-header class="mybg">
-  <ion-toolbar color="mytheme">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    </ion-buttons>
     <ion-title color="light">
       Order Details
     </ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="onClick()">
+    <ion-buttons [routerLink]="['/orders']" slot="end">
+      <ion-button >
         <ion-icon name="close" slot="icon-only" class="white" margin></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding color="light">
-  <ion-item margin-bottom no-padding lines="none" class="card">
+<ion-content padding>
+  <ion-button slot="end">
+    <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+  </ion-button>
+  <ion-item>
     <ion-row align-items-center>
-      <ion-col size="2">
-        <img [src]="">
-      </ion-col>
       <ion-col>
-        <ion-row>
-          <ion-text>
-            <h5 class="title" no-margin><strong>1</strong></h5>
-          </ion-text>
-        </ion-row>
-        <ion-row>
-          <ion-text>
-            <h6 no-margin class="sub">2</h6>
-          </ion-text>
-        </ion-row>
+        <ion-img src="https://static.wixstatic.com/media/c8a905_0f6ff489e5f2489abe4e324d4792fb96~mv2.jpg/v1/fit/w_800%2Ch_533%2Cal_c%2Cq_80/file.jpg" class="img"></ion-img>
+        <ion-label class="buy">
+          <h1>วันหมดอายุ 25-30-64</h1>
+          <h1>ราคา 50 บาท</h1>
+
+
+        </ion-label>
       </ion-col>
     </ion-row>
   </ion-item>
-  <ion-item margin-bottom no-padding lines="none" class="card">
-    <ion-col>
-      <ion-row>
-        <ion-col size="4">
-          <ion-text>
-            <h6 class="title gray" no-margin>Order date</h6>
-          </ion-text>
-        </ion-col>
-        <ion-col>
-          <ion-text>
-            <h6 no-margin class="title">3</h6>
-          </ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="4">
-          <ion-text>
-            <h6 class="title gray" no-margin>Order #</h6>
-          </ion-text>
-        </ion-col>
-        <ion-col>
-          <ion-text>
-            <h6 no-margin class="title">5</h6>
-          </ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="4">
-          <ion-text>
-            <h6 class="title gray" no-margin>Order total</h6>
-          </ion-text>
-        </ion-col>
-        <ion-col>
-          <ion-text>
-            <h6 no-margin class="title">6</h6>
-          </ion-text>
-        </ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-item>
-  <ion-item margin-bottom no-padding lines="none" class="card">
-    <ion-col>
-      <ion-row>
-        <ion-text>
-          <h6 class="title" no-margin>Billing Address</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">7</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">8</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">9</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">20</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">21</h6>
-        </ion-text>
-      </ion-row>
-    </ion-col>
-  </ion-item>
-  <ion-item margin-bottom no-padding lines="none" class="card">
-    <ion-col>
-      <ion-row>
-        <ion-text>
-          <h6 class="title" no-margin>Shipping Address</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">22</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">23</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray"></h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">13</h6>
-        </ion-text>
-      </ion-row>
-      <ion-row>
-        <ion-text>
-          <h6 no-margin class="title gray">12</h6>
-        </ion-text>
-      </ion-row>
-    </ion-col>
-  </ion-item>
-  <ion-item margin-bottom no-padding lines="none" class="card">
-    <ion-col>
-      <ion-row>
-        <ion-col size="4">
-          <ion-text>
-            <h6 class="title gray" no-margin>Amount</h6>
-          </ion-text>
-        </ion-col>
-        <ion-col>
-          <ion-text>
-            <h6 no-margin class="title">11</h6>
-          </ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="4">
-          <ion-text>
-            <h6 class="title gray" no-margin>Tax</h6>
-          </ion-text>
-        </ion-col>
-        <ion-col>
-          <ion-text>
-            <h6 no-margin class="title">10</h6>
-          </ion-text>
-        </ion-col>
-      </ion-row>
-    </ion-col>
-  </ion-item>
 </ion-content>
+
+
