@@ -1,0 +1,35 @@
+<ion-header class="mybg">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title color="light">
+      Order Details
+    </ion-title>
+    <ion-buttons [routerLink]="['/orders']" slot="end">
+      <ion-button >
+        <ion-icon name="close" slot="icon-only" class="white" margin></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button slot="end">
+    <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+  </ion-button>
+  <ion-item>
+    <ion-row align-items-center>
+      <ion-col>
+        <ion-img src="https://static.wixstatic.com/media/c8a905_0f6ff489e5f2489abe4e324d4792fb96~mv2.jpg/v1/fit/w_800%2Ch_533%2Cal_c%2Cq_80/file.jpg" class="img"></ion-img>
+        <ion-label class="buy">
+          <h1>วันหมดอายุ 25-30-64</h1>
+          <h1>ราคา 50 บาท</h1>
+
+
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+</ion-content>
+
+

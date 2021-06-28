@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -23,10 +23,15 @@ const routes: Routes = [
     path: 'forgot-password',
     loadChildren: () => import('./auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
-  // {
-  //   path: 'shops',
-  //   loadChildren: () => import('./shops/shops.module').then( m => m.ShopsPageModule)
-  // }
+
+  {
+    path: 'orders',
+    loadChildren: () => import('./orders/orders.module').then( m => m.OrdersPageModule)
+  },
+  {
+    path: 'orderbbn',
+    loadChildren: () => import('./orderbbn/orderbbn.module').then( m => m.OrderbbnPageModule)
+  },
 
 ];
 
