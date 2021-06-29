@@ -10,6 +10,15 @@ import { DataService, HomeTab } from 'src/app/data.service';
 export class HomePage implements OnInit{
 
 
+  appPages = [
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Shopping Cart', url: '/home', icon: 'cart' },
+    { title: 'Oder History', url: '/orders', icon: 'list' },
+    { title: 'Settings', url: '/setting', icon: 'settings' },
+    { title: 'About', url: '', icon: 'reader' },
+    { title: 'Logout', url: '/login', icon: 'log-out' },
+  ];
+
   menu = '';
   banana = '';
 
