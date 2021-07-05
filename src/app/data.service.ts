@@ -11,7 +11,7 @@ export interface HomeTab{
   providedIn: 'root'
 })
 export class DataService {
-  orders: import("c:/Users/A_R_T/Desktop/banana-app/src/app/orders/orders.page").OrdersPage[];
+  orders: import("src/app/orders/orders.page").OrdersPage[];
 
   constructor(private http:HttpClient) {}
 
