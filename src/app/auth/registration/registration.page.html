@@ -9,28 +9,28 @@
 
 <ion-content>
   <form>
-    <ion-item lines="full" class="t1" >
+    <ion-item lines="full" class="text-firs-name" >
       <ion-label position="floating">Firs Name</ion-label>
       <ion-input type="text" required></ion-input>
     </ion-item>
 
-    <ion-item lines="full" class="t2">
+    <ion-item lines="full" class="text-last-name">
       <ion-label position="floating">Last Name</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="text" required></ion-input>
     </ion-item>
 
-    <ion-item lines="full" class="t3" >
+    <ion-item lines="full" class="text-email" >
       <ion-label position="floating">Email</ion-label>
       <ion-input type="text" required></ion-input>
     </ion-item>
 
-    <ion-item lines="full" class="t4">
+    <ion-item lines="full" class="text-password">
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password" required></ion-input>
     </ion-item>
   </form>
 
-  <ion-button [routerLink]="['/login']" expand="block" color="warning"
+  <ion-button  [routerLink]="['/login']" expand="block" color="warning"
     >Sign up</ion-button
   >
 </ion-content>

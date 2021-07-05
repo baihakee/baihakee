@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -36,6 +36,11 @@ const routes: Routes = [
     path: 'product-detail',
     loadChildren: () => import('./product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
   },
+  {
+    path: 'side-menu',
+    loadChildren: () => import('./modules/side-menu/side-menu.module').then( m => m.SideMenuPageModule)
+  },
+
 
 
 ];

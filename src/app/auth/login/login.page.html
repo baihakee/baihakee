@@ -1,5 +1,5 @@
 <ion-header >
-  <ion-toolbar color="warning" class="bar">
+  <ion-toolbar color="warning" class="toolbar">
     <ion-row>
       <ion-col>
         <ion-title class="login">LOGIN</ion-title>
@@ -7,7 +7,7 @@
     </ion-row>
     <ion-col>
       <ion-img
-        class="img"
+        class="image"
         src="https://static.wixstatic.com/media/2cd43b_7461dee11d924b689ca8596010564523~mv2.png/v1/fill/w_320,h_276,q_90/2cd43b_7461dee11d924b689ca8596010564523~mv2.png"
       ></ion-img>
     </ion-col>
@@ -16,14 +16,14 @@
 
 <ion-content >
   <form>
-    <ion-item lines="full" class="text">
+    <ion-item lines="full" class="text-email">
       <ion-label position="floating">Email</ion-label>
-      <ion-input clearInput type="text" required></ion-input>
+      <ion-input #emailInput clearInput type="text" required></ion-input>
     </ion-item>
 
-    <ion-item lines="full" class="text1">
+    <ion-item lines="full" class="text-password">
       <ion-label position="floating">Password</ion-label>
-      <ion-input clearInput type="password" required></ion-input>
+      <ion-input #PasswordInput clearInput type="password" required ></ion-input>
     </ion-item>
   </form>
 
@@ -41,7 +41,7 @@
       <ion-col align-self-center>
         <ion-button
           fill="outline"
-          [routerLink]="['/home']"
+          (click)="login()"
           expand="block"
           color="danger"
           >Sign In</ion-button>
@@ -49,7 +49,6 @@
         <div class="line">or</div>
 
         <ion-button
-          class=""
           fill="outline"
           expand="block"
           color="success"
