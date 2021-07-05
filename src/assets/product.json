@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Banana Top",
+        "cost_price": 18,
+        "currency":"$",
+        "image": [
+            "../../assets/img/b1.jpeg"
+            
+        ]
+    },
+    {
+        "name": "Banana ",
+        "cost_price": 24,
+        "currency":"$",
+        "image": [
+            "../../assets/img/b2.jpeg"
+           
+        ]
+    },
+    {
+        "name": "Banana m",
+        "cost_price": 65,
+        "currency":"$",
+        "image": [
+            "../../assets/img/b3.jpeg"
+           
+        ]
+    },
+    {
+        "name": "Banana m",
+        "cost_price": 85,
+        "currency":"$",
+        "image": [
+            "../../assets/img/b4.jpeg"
+           
+        ]
+    },
+    {
+        "name": "Banana Gm",
+        "cost_price": 577,
+        "currency":"$",
+        "image": [
+            "../../assets/img/b5.jpeg"
+           
+        ]
+    },
+    {
+        "name": "Banana Sell",
+        "cost_price": 55,
+        "currency":"$",
+        "image": [
+            "../../assets/img/b6.jpeg"
+           
+        ]
+    },
+    {
+        "name": "Banana bm",
+        "cost_price": 65,
+        "currency":"$",
+        "image": [
+            "../../assets/img/b7.jpeg"
+           
+        ]
+    }
+]

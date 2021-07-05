@@ -23,14 +23,9 @@ const routes: Routes = [
     path: 'forgot-password',
     loadChildren: () => import('./auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
-
   {
-    path: 'orders',
-    loadChildren: () => import('./orders/orders.module').then( m => m.OrdersPageModule)
-  },
-  {
-    path: 'orderbbn',
-    loadChildren: () => import('./orderbbn/orderbbn.module').then( m => m.OrderbbnPageModule)
+    path: 'productdetail',
+    loadChildren: () => import('./productdetail/productdetail.module').then( m => m.ProductdetailPageModule)
   },
   {
     path: 'product-detail',
@@ -42,6 +37,11 @@ const routes: Routes = [
   },
 
 
+
+  // {
+  //   path: 'shops',
+  //   loadChildren: () => import('./shops/shops.module').then( m => m.ShopsPageModule)
+  // }
 
 ];
 

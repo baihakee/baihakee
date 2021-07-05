@@ -2,45 +2,57 @@
   <ion-toolbar color="primary">
     <ion-icon slot="end" name="cart-outline"></ion-icon>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button class="white menu"></ion-menu-button>
     </ion-buttons>
-    <ion-title class="light">
+    <ion-title>
       Your Orders
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <app-side-menu></app-side-menu>
 
+    <ion-item>
+      <ion-avatar class="avt">
+        <img
+          src="https://static.wixstatic.com/media/c8a905_0f6ff489e5f2489abe4e324d4792fb96~mv2.jpg/v1/fit/w_800%2Ch_533%2Cal_c%2Cq_80/file.jpg">
 
-<ion-router-outlet id="main"></ion-router-outlet>
+      </ion-avatar>
+      <ion-text>
+        <h1 class="title">BANANA TOP</h1>
+        <ion-col>
+          <ion-row>
+            <ion-text>
+              <h1 class="sub">Delivered</h1>
+            </ion-text>
+          </ion-row>
+        </ion-col>
 
-<ion-content [routerLink]="['/orderbbn']" padding color="light">
-  <ion-item margin-bottom no-padding lines="none" class="bnn">
-    <ion-row align-items-center>
-      <ion-col size="2">
-        <img src="https://static.wixstatic.com/media/c8a905_0f6ff489e5f2489abe4e324d4792fb96~mv2.jpg/v1/fit/w_800%2Ch_533%2Cal_c%2Cq_80/file.jpg">
-      </ion-col>
-      <ion-toolbar>
-        <ion-buttons slot="end">
-          <ion-button>
-            <ion-icon name="chevron-forward-circle-outline"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-      <ion-col>
-        <ion-row>
-          <ion-text>
-            <h1 class="title" no-margin><strong>กล้วยไข่หวาน</strong></h1>
-          </ion-text>
-        </ion-row>
-        <ion-row>
-          <ion-text>
-            <h1 no-margin class="sub">ข้อมูล</h1>
-          </ion-text>
-        </ion-row>
-      </ion-col>
-      <ion-col float-right size="2">
-      </ion-col>
-    </ion-row>
-  </ion-item>
-</ion-content>
+      </ion-text>
+      <ion-item slot="end">
+        <ion-icon color="primary" name="chevron-forward-circle-outline"></ion-icon>
+      </ion-item>
+    </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-avatar class="avt">
+        <img src="https://cf.shopee.co.th/file/9c7d950dd458e590905ed3dfe993f99b">
+
+      </ion-avatar>
+      <ion-text>
+        <h1 class="title">SIRT TOP</h1>
+        <ion-col>
+          <ion-row>
+            <ion-text>
+              <h1 class="sub">Delivered</h1>
+            </ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-text>
+      <ion-item slot="end">
+        <ion-icon color="primary" name="chevron-forward-circle-outline"></ion-icon>
+      </ion-item>
+
+    </ion-item>
+
+  </ion-list>
+

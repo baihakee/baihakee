@@ -1,14 +1,15 @@
-<ion-header class="d" [translucent]="true">
+<ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title class="home"> BANANASHOP </ion-title>
-    <ion-input type="text" placeholder="I'm shopping for..." class="search-bar" slot="end"></ion-input>
+    <ion-title class="home">BANANASHOP</ion-title>
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon name="cart" slot="icon-only" class="white top-btn"></ion-icon>
-
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="cart"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -28,7 +29,7 @@
 
 <ion-router-outlet id="main"></ion-router-outlet>
 
-<ion-content class="imgbnn">
+<ion-content class="imgbanana">
 
   <ion-slides pager="true" >
     <ion-slide>
@@ -53,15 +54,21 @@
   </ion-slides>
 
 
-    <ion-row>
-      <ion-col>
-        <ion-img [routerLink]="['/product-detail']" class="img1" src="https://images.unsplash.com/photo-1587334206596-c0f9f7dccbe6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=801&q=80"></ion-img>
-      </ion-col>
-      <ion-col>
-        <ion-img class="img2" src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"></ion-img>
-      </ion-col>
-    </ion-row>
+  <ion-row>
+    <ion-card *ngFor="let item of productData" class="card">
 
-
-
+      <ion-row>
+        <ion-col>
+          <img class="imgproduct" [src]="item.image">
+          <ion-row class="name">
+            {{item.name}}
+          </ion-row>
+          <ion-row class="price">
+            {{item.cost_price}}
+            {{item.currency}}
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
 </ion-content>
