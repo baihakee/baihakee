@@ -15,7 +15,7 @@ export class DataService {
 
 
   getproductdata(){
-    return this.http.get('../../assets/product.json')
+    return this.http.get('../../assets/product.json');
   }
 
   item_menu: Array<HomeTab> = [
