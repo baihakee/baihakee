@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { OrdersPage } from '../orders/orders.page';
+
 
 @Component({
   selector: 'app-orderbbn',
@@ -20,9 +20,5 @@ export class OrderbbnPage implements OnInit {
   }
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c00fadc5138472e07d678e805a90295189af1aad
 
 }

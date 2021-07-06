@@ -9,9 +9,13 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
 <app-side-menu></app-side-menu>
 
-    <ion-item>
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-content padding color="medium">
+  <ion-list *ngFor="let item of orders">
+    <ion-item (click)="openDailog(item)">
       <ion-avatar class="avt">
         <img [src]="item.image">
       </ion-avatar>
