@@ -14,9 +14,6 @@ export class OrderbbnPage implements OnInit {
   ngOnInit() {
   }
 
-  onClick(){
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    this.ngOnInit;
-  }
+
 
 }

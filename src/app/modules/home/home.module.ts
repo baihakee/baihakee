@@ -20,6 +20,6 @@ import { SideMenuPageModule } from '../side-menu/side-menu.module';
 
   ],
   declarations: [HomePage]
-  
+
 })
 export class HomePageModule {}

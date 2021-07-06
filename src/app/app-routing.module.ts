@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -35,6 +36,16 @@ const routes: Routes = [
     path: 'side-menu',
     loadChildren: () => import('./modules/side-menu/side-menu.module').then( m => m.SideMenuPageModule)
   },
+  {
+    path: 'orders',
+    loadChildren: () => import('./orders/orders.module').then(m => m.OrdersPageModule)
+  },
+  {
+    path: 'orderbbn',
+    loadChildren: () => import('./orderbbn/orderbbn.module').then(m => m.OrderbbnPageModule)
+  },
+
+
 
 
 
