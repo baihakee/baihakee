@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 export interface HomeTab{
@@ -10,17 +11,24 @@ export interface HomeTab{
   providedIn: 'root'
 })
 export class DataService {
-  orders: import("c:/Users/A_R_T/Desktop/banana-app/src/app/orders/orders.page").OrdersPage[];
+  orders: import("src/app/orders/orders.page").OrdersPage[];
 
-  constructor() {}
+  constructor(private http:HttpClient) {}
 
 
-item_menu: Array<HomeTab> =
-[{title: 'BANANATOP'},
- {title: 'POPPULAR'},
- {title: 'Reviews'},
- {title: 'Seller'}];
+  getproductdata(){
+    return this.http.get('../../assets/product.json')
+  }
+
+  item_menu: Array<HomeTab> = [  
+    {title: 'BANANATOP'},
+    {title: 'POPPULAR'},
+    {title: 'Reviews'},
+    {title: 'Seller'}
+  ];
 };
+
+
 
 
 
