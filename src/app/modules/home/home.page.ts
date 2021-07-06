@@ -36,14 +36,14 @@ export class HomePage implements OnInit {
   }
 
 
-  ngOnInit() { 
-    this.dataService.getproductdata().subscribe((res)=>{
-      console.log(res)
-      this.productData = res
-      console.log(this.productData)
-    })
+  ngOnInit() {
+    this.dataService.getproductdata().subscribe((res) => {
+      console.log(res);
+      this.productData = res;
+      console.log(this.productData);
+    });
   }
-  
+
 }
 
 
