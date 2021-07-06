@@ -8,7 +8,7 @@ import { DataService, HomeTab } from 'src/app/data.service';
 })
 
 export class HomePage implements OnInit{
-  
+
 
   menu = '';
   banana = '';
