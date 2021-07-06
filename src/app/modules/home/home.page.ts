@@ -19,7 +19,7 @@ import { HttpClient } from '@angular/common/http';
   //   }
   // }
 
-export class HomePage {
+export class HomePage implements OnInit {
 
   productData:any;
   menu = '';
