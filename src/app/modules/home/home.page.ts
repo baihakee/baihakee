@@ -8,20 +8,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['home.page.scss'],
 })
 
-  // export class HomePage{
-  //   members : any;
-  //   constructor(public http:HttpClient){
-  //     let datas = this.http.get('https://script.google.com/a/northbkk.ac.th/macros/s/AKfycbysP5vIH6yQog3PRTHvK6GCJb-dWxHqphL_p6_RfZi37PUGs_k/exec')
-  //     datas.subscribe(result => {
-  //       this.members=result;
-  //       console.log(this.members)
-  //     })
-  //   }
-  // }
+
 
 export class HomePage implements OnInit {
 
-  productData:any;
+  productData: any;
   menu = '';
   banana = '';
 
