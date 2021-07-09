@@ -1,13 +1,73 @@
-<ion-header class="mybg">
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle="user-menu">
+        <ion-icon name="menu"></ion-icon>
+      </button>
     </ion-buttons>
-    <ion-title color="light">
-      product Details
-    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="doLogout()">
+        <ion-icon name="ios-log-out" color="primary"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <div text-center (click)="editProfile()">
+    <img class="user-avatar" src="assets/imgs/avatar.svg" />
+  </div>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="category" color="primary">
+      <ion-segment-button value="official">
+        Official Info
+      </ion-segment-button>
+      <ion-segment-button value="personal">
+        Personal Info
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
+<ion-content padding>
+  <div [ngSwitch]="category">
+    <ion-list *ngSwitchCase="'personal'">
+      <ion-item>
+        <h4>First Name</h4>
+        <p>X</p>
+      </ion-item>
+      <ion-item>
+        <h4>Last Name</h4>
+        <p>YZ</p>
+      </ion-item>
+      <ion-item>
+        <h4>Phone No</h4>
+        <p>(541) 754-3010</p>
+      </ion-item>
+      <ion-item>
+        <h4>Address</h4>
+        <p>XYZ 711-2880 Nulla St. Mankato Mississippi 96522</p>
+      </ion-item>
+    </ion-list>
 
-<app-side-menu></app-side-menu>
+    <ion-list *ngSwitchCase="'official'">
+      <ion-item>
+        <h4>User Id</h4>
+        <p>Xyz</p>
+      </ion-item>
+      <ion-item>
+        <h4>Email</h4>
+        <p>Xyz@abc.com</p>
+      </ion-item>
+      <ion-item>
+        <h4>Employer</h4>
+        <p>Amazon</p>
+      </ion-item>
+      <ion-item>
+        <h4>Company Name</h4>
+        <p>Amazon India</p>
+      </ion-item>
+      <ion-item>
+        <h4>Company Id</h4>
+        <p>{{nowDate|date:'hh:mm:a'}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
