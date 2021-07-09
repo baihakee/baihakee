@@ -1,5 +1,5 @@
 <ion-header translucent>
-  <ion-toolbar color="danger">
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -25,8 +25,8 @@
 
       <ion-label *ngFor="let item of cartBanana" class="data">
         <p class="text">{{item.product}}</p>
-        <p>price: {{item.price}}<a>$</a></p>
-        <p>shipping: {{item.shipping}}<a>$</a></p>
+        <p>price: {{item.price}}<a class="cerrancy">$</a></p>
+        <p>shipping: {{item.shipping}}<a class="cerrancy">$</a></p>
       </ion-label>
     </ion-buttons>
 
@@ -59,8 +59,8 @@
 
       <ion-label *ngFor="let item of cartBanana" class="data">
         <p class="text">{{item.product}}</p>
-        <p>price: {{item.price}}<a>$</a></p>
-        <p>shipping: {{item.shipping}}<a>$</a></p>
+        <p>price: {{item.price}}<a class="cerrancy">$</a></p>
+        <p>shipping: {{item.shipping}}<a class="cerrancy">$</a></p>
       </ion-label>
 
     </ion-buttons>
@@ -97,19 +97,19 @@
       <ion-col>
         <ion-row>
           <span>Item Total </span>
-          <span class="Total"> {{item.price}} <a>$</a></span>
+          <span class="Total"> <a class="cerrancy">$</a></span>
         </ion-row>
       </ion-col>
       <ion-col>
         <ion-row>
           <span>Shipping</span>
-          <span class="shipping"> {{item.shipping}} <a>$</a></span>
+          <span class="shipping">  <a class="cerrancy">$</a></span>
         </ion-row>
       </ion-col>
       <ion-col>
         <ion-row>
           <span>Item Total</span>
-          <span class="Item-Total"> {{item.sum}} <a>$</a></span>
+          <span class="Item-Total"> <a class="cerrancy">$</a></span>
         </ion-row>
       </ion-col>
     </ion-col>
@@ -120,7 +120,7 @@
       <small>
         <ion-text>
           By tapping 'Checkout' you aggree to the
-          <a>Terms of Use</a> and <a>Privacy Policy</a>
+          <a class="term">Terms of Use</a> and <a class="privacy">Privacy Policy</a>
         </ion-text>
       </small>
     </ion-col>
@@ -129,12 +129,12 @@
   <ion-item>
     <ion-col>
       <small>
-        <a> 30 Day Free Return and Refund</a>
+        <a class="return"> 30 Day Free Return and Refund</a>
       </small>
     </ion-col>
   </ion-item>
 
-  <ion-button expand="full" color="danger">
+  <ion-button expand="full" color="success">
     <a class="Checkout">Checkout</a>
   </ion-button>
 </form>
