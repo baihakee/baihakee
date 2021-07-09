@@ -44,6 +44,13 @@ const routes: Routes = [
     path: 'orderbbn',
     loadChildren: () => import('./orderbbn/orderbbn.module').then(m => m.OrderbbnPageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
+
+
+
 
 
 

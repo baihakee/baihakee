@@ -1,0 +1,140 @@
+<ion-header translucent>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<app-side-menu></app-side-menu>
+
+<ion-content>
+
+  <ion-item>
+    <ion-buttons>
+      <ion-col>
+        <ion-row>
+          <ion-img class="imag-banana"
+            src="https://i2.wp.com/www.eatthis.com/wp-content/uploads//media/images/ext/262017959/banana-yellow-background.jpg?resize=640%2C360&ssl=1">
+          </ion-img>
+        </ion-row>
+      </ion-col>
+    </ion-buttons>
+    <ion-buttons>
+
+      <ion-label *ngFor="let item of cartBanana" class="data">
+        <p class="text">{{item.product}}</p>
+        <p>price: {{item.price}}<a>$</a></p>
+        <p>shipping: {{item.shipping}}<a>$</a></p>
+      </ion-label>
+    </ion-buttons>
+
+    <ion-list class="drop-down">
+      <ion-item>
+        <ion-select value="1" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+  </ion-item>
+
+
+
+  <ion-item>
+    <ion-buttons>
+      <ion-col>
+        <ion-row>
+          <ion-img class="imag-banana"
+            src="https://i2.wp.com/www.eatthis.com/wp-content/uploads//media/images/ext/262017959/banana-yellow-background.jpg?resize=640%2C360&ssl=1">
+          </ion-img>
+        </ion-row>
+      </ion-col>
+    </ion-buttons>
+    <ion-buttons>
+
+      <ion-label *ngFor="let item of cartBanana" class="data">
+        <p class="text">{{item.product}}</p>
+        <p>price: {{item.price}}<a>$</a></p>
+        <p>shipping: {{item.shipping}}<a>$</a></p>
+      </ion-label>
+
+    </ion-buttons>
+    <ion-list class="drop-down">
+      <ion-item>
+        <ion-select value="1" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+  </ion-item>
+
+</ion-content>
+
+<form>
+  <ion-item>
+  
+          <ion-input class="code" clearInput>
+            <ion-label>
+            </ion-label>
+          </ion-input>
+    
+    <ion-button class="apply" fill="outline" expand="block" color="danger">
+      Apply
+    </ion-button>
+  </ion-item>
+
+  <ion-item *ngFor="let item of cartBanana">
+    <ion-col>
+      <ion-col>
+        <ion-row>
+          <span>Item Total </span>
+          <span class="Total"> {{item.price}} <a>$</a></span>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <span>Shipping</span>
+          <span class="shipping"> {{item.shipping}} <a>$</a></span>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <span>Item Total</span>
+          <span class="Item-Total"> {{item.sum}} <a>$</a></span>
+        </ion-row>
+      </ion-col>
+    </ion-col>
+  </ion-item>
+
+  <ion-item>
+    <ion-col>
+      <small>
+        <ion-text>
+          By tapping 'Checkout' you aggree to the
+          <a>Terms of Use</a> and <a>Privacy Policy</a>
+        </ion-text>
+      </small>
+    </ion-col>
+  </ion-item>
+
+  <ion-item>
+    <ion-col>
+      <small>
+        <a> 30 Day Free Return and Refund</a>
+      </small>
+    </ion-col>
+  </ion-item>
+
+  <ion-button expand="full" color="danger">
+    <a class="Checkout">Checkout</a>
+  </ion-button>
+</form>
