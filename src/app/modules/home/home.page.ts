@@ -13,7 +13,7 @@ import { ProductdetailPage } from 'src/app/productdetail/productdetail.page';
 export class HomePage implements OnInit{
 
 
-
+  selectTebs = 'Banana1';
   productData: any;
   menu = '';
 
