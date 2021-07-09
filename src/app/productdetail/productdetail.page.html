@@ -1,68 +1,41 @@
-<ion-header [translucent]="true">
+<ion-header class="mybg">
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title class="home">productdetail</ion-title>
+    <ion-title>
+      Product Details
+    </ion-title>
+    <ion-button (click)="backClicked()" slot="end">
+      <ion-icon name="close-outline">
+      </ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-menu contentId="main">
-  <ion-header>
-    <ion-toolbar color="primary">
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
-      <ion-item [routerLink]="['/home']">
-        <ion-icon slot="start" name="home-outline"></ion-icon>
-        Home
-      </ion-item>
-      <ion-item>
-        <ion-icon slot="start" name="cart-outline"></ion-icon>
-        Cart
-      </ion-item>
-      <ion-item>
-        <ion-icon slot="start" name="list-outline"></ion-icon>
-        Oder History
-      </ion-item>
-      <ion-item>
-        <ion-icon slot="start" name="settings-outline"></ion-icon>
-        Setting
-      </ion-item>
-      <ion-item>
-        <ion-icon slot="start" name="reader-outline"></ion-icon>
-        About
-      </ion-item>
-      <ion-item [routerLink]="['/login']">
-        <ion-icon slot="start" name="log-out-outline"></ion-icon>
-        Logout
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-menu>
 
-<ion-router-outlet id="main"></ion-router-outlet>
-
-
-<ion-content padding color="medium">
-  <ion-item >
-    <ion-row align-items-center>
+<ion-content>
+  <ion-card-content class="card">
+    <ion-row>
       <ion-col>
-        <img [src]="data.image">
-        <ion-label class="banana">
-          <ion-row>
+        <img [src]="dataproduct.image" class="imgdetail">
+        <ion-label>
+          <ion-row class="banana">
             {{dataproduct.name}}
           </ion-row>
           <ion-row>
-            {{dataproduct.cost_price}}
-          </ion-row>
-          <ion-row>
-            {{dataproduct.discount}}
+            {{dataproduct.price}}
+            {{dataproduct.currency}}
+
           </ion-row>
         </ion-label>
       </ion-col>
     </ion-row>
-  </ion-item>
+  </ion-card-content>
+  <ion-card-content class="carddetail"> 
+  <ion-col class="detail">
+      {{dataproduct.detail}}
+    </ion-col>
+  </ion-card-content>    
+  <ion-icon *ngIf="!liked" size="small" float-right name="heart-outline" class="love" (click)="like()">
+    </ion-icon>
+    <ion-icon *ngIf="liked" size="small" float-right name="heart" class="love_red" (click)="like()">
+    </ion-icon> 
 </ion-content>

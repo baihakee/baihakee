@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-
-
 import { OrderbbnPage } from '../orderbbn/orderbbn.page';
 
 @Component({

@@ -14,61 +14,64 @@
     </ion-buttons>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-segment mode="md" scrollable="true">
-      <ion-segment-button *ngFor="let item of data;">
-        <ion-text>{{item.title}}</ion-text>
+    <ion-segment [(ngModel)]="selectTebs">
+      <ion-segment-button value="Banana1">
+        <ion-label>Banana1</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Banana2">
+        <ion-label>Banana2</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 
-<app-side-menu></app-side-menu>
 
 
+      <app-side-menu></app-side-menu>
 
-<ion-router-outlet id="main"></ion-router-outlet>
+      <ion-router-outlet id="main"></ion-router-outlet>
+      
+      <ion-content class="imgbanana">
+        
+        <ion-slides pager="true" *ngIf="selectTebs == 'Banana1'">
+          <ion-slide >
+            <ion-slide>
+              <ion-img src="https://media1.tenor.com/images/562a1d5621e67e0d6502f26a5201249c/tenor.gif?itemid=7396869">
+              </ion-img>
+            </ion-slide>
+            <ion-img
+              src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=809&q=80">
+            </ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img
+              src="https://images.unsplash.com/photo-1579523360595-bee0f3b9fafb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
+            </ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img
+              src="https://images.unsplash.com/photo-1604238401172-a5c5f8d044ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80">
+            </ion-img>
+          </ion-slide>
+        </ion-slides>
+      
 
-<ion-content class="imgbanana">
-
-  <ion-slides pager="true" >
-    <ion-slide>
-      <ion-slide>
-        <ion-img src="https://media1.tenor.com/images/562a1d5621e67e0d6502f26a5201249c/tenor.gif?itemid=7396869">
-        </ion-img>
-      </ion-slide>
-      <ion-img
-        src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=809&q=80">
-      </ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img
-        src="https://images.unsplash.com/photo-1579523360595-bee0f3b9fafb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80">
-      </ion-img>
-    </ion-slide>
-    <ion-slide>
-      <ion-img
-        src="https://images.unsplash.com/photo-1604238401172-a5c5f8d044ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80">
-      </ion-img>
-    </ion-slide>
-  </ion-slides>
-
-
-  <ion-row>
-    <ion-card *ngFor="let item of productData" class="card">
-
-      <ion-row>
-        <ion-col>
-          <img class="imgproduct" [src]="item.image">
-          <ion-row class="name">
-            {{item.name}}
-          </ion-row>
-          <ion-row class="price">
-            {{item.cost_price}}
-            {{item.currency}}
-          </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-card>
-  </ion-row>
+        
+        <ion-row *ngIf="selectTebs == 'Banana2'">
+          <ion-card *ngFor="let item of productData" (click)="openDailog(item)" class="card">
+            <ion-row>
+              <ion-col>
+                <img class="imgproduct" [src]="item.image">
+                <ion-row class="name">
+                  {{item.name}}
+                </ion-row>
+                <ion-row class="price">
+                  {{item.price}}
+                  {{item.currency}}
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-row>
 </ion-content>

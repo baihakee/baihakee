@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProductdetailPage } from './productdetail.page';
 
+
 const routes: Routes = [
   {
     path: '',
